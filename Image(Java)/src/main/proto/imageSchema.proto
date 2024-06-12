@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com";
+package com;
+
+message imageLayer{
+  string imageUrl=1;
+  int32 x=2;
+  int32 y=3;
+  int32 height=4;
+  int32 width=5;
+  int32 opacity=6;
+  int32 rotation=7;
+}
+
+message textLayer{
+  string text=1;
+  int32 x=2;
+  int32 y=3;
+  int32 fontSize=4;
+
+}
+
+message Layers{
+  repeated imageLayer imglayers=1;
+  repeated textLayer txtlayers=2;
+}
+
+
+message HtmlContent{
+  string htmlContent=1;
+}
+
+
+
+message ImageData{
+  bytes imageBytes=1;
+}
+
+service RecieveLayers{
+  rpc recieveLayers(HtmlContent) returns (ImageData);
+  rpc recieveLayersClient(Layers)returns (ImageData);
+}
