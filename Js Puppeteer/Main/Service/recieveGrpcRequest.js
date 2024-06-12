@@ -14,7 +14,7 @@ let browser;
 async function initializePages() {
     browser = await puppeteer.launch({ headless: false });
     
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 7; i++) {
         const page = await browser.newPage();
         pages.push(page);
     }
