@@ -19,26 +19,28 @@ message textLayer{
   int32 x=2;
   int32 y=3;
   int32 fontSize=4;
-
 }
 
+// Structure received from Client
 message Layers{
   repeated imageLayer imglayers=1;
   repeated textLayer txtlayers=2;
 }
 
-
+// Structure passed on to JS
 message HtmlContent{
   string htmlContent=1;
 }
 
-
-
+// Response Structure
 message ImageData{
   bytes imageBytes=1;
 }
 
 service RecieveLayers{
+  // Service to forward to JS
   rpc recieveLayers(HtmlContent) returns (ImageData);
+
+  // Service to receive request from Client
   rpc recieveLayersClient(Layers)returns (ImageData);
 }

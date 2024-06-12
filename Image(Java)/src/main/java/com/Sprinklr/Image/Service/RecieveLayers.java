@@ -19,19 +19,21 @@ public class RecieveLayers extends RecieveLayersGrpc.RecieveLayersImplBase {
     @Autowired
     private HtmlString htmlString;
 
+    // receive Request from Client
         @Override
         public void recieveLayersClient(Layers layers, StreamObserver<ImageData> responseObserver) {
 
+            // Getting the Layers info convert to Html String
             String htmlContent = htmlString.htmlstring(layers);
 
+            // Html string passed to JS
             CompletableFuture<ImageData> futureResponse = serviceToJS.sendJS(htmlContent);
 
-
+            // Response from JS
             futureResponse.whenComplete((response, throwable) -> {
                 if (throwable != null) {
                     responseObserver.onError(throwable);
                 } else {
-
                     responseObserver.onNext(response);
                 }
                 responseObserver.onCompleted();

@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 @Controller
 public class HtmlString {
 
+
+    // Html string building
     public String  htmlstring(Layers layers) {
         StringBuilder htmlContent=new StringBuilder();
         htmlContent.append(
@@ -21,6 +23,7 @@ public class HtmlString {
                         "  </head>"+
                         "  <body>");
 
+        // convert all images contained layer to Html string
         if (!layers.getImglayersList().isEmpty()) {
             String imgLayersHtml = layers.getImglayersList().stream()
                     .map(layer -> String.format(
@@ -30,6 +33,7 @@ public class HtmlString {
             htmlContent.append(imgLayersHtml);
         }
 
+        // convert all text contained layer to Html string
         if (!layers.getTxtlayersList().isEmpty()) {
             String txtLayersHtml = layers.getTxtlayersList().stream()
                     .map(layer -> String.format(
