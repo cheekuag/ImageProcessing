@@ -25,6 +25,7 @@ The image editor allows clients to send layer information, which is processed to
 5. **Image Response**: The generated image is sent back to the JavaServer via gRPC.
 6. **Client Response**: The JavaServer returns the generated image to the client.
 
+![Architecture Diagram](image/architectureDiagram.png)
 
 ### Setting Up JavaServer
 
