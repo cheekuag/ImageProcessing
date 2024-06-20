@@ -32,7 +32,7 @@ initializePages();
 server.addService(fileProto.RecieveLayers.service, { recieveLayers });
 
 // Define the server port
-const port = 'localhost:3000';
+const port = '192.168.145.80:3000';
 
 server.bindAsync(port, grpc.ServerCredentials.createInsecure(), (error, port) => {
     if (error) {
