@@ -10,10 +10,16 @@ let browser;
 
 // Initialising Browser and certain newPages
 async function initializePages() {
-    browser = await puppeteer.launch({ headless: false });
+    console.log("Browser opened")
+    browser = await puppeteer.launch({ 
+        headless: true, // Run in headless mode
+        executablePath: '/usr/bin/chromium',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+     });
     
     for (let i = 0; i < 7; i++) {
         const page = await browser.newPage();
+        console.log("pages opened")
         pages.push(page);
     }
     

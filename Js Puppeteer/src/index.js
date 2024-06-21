@@ -5,7 +5,7 @@ const {  recieveLayers } = require('./services/grpcRequest.js');
 const { initializePages } =require('./services/browserInit')
 
 // Define the path to the .proto file
-const PROTO_PATH = path.resolve(__dirname, '/Users/adityaagrawal/Desktop/ImageProcessing/Js Puppeteer/src/models/imageSchema.proto');
+const PROTO_PATH = path.resolve(__dirname, './models/imageSchema.proto');
 
 // Loading the .proto file
 var packageDefinition = protoLoader.loadSync(
@@ -32,7 +32,7 @@ initializePages();
 server.addService(fileProto.RecieveLayers.service, { recieveLayers });
 
 // Define the server port
-const port = '192.168.145.80:3000';
+const port = '0.0.0.0:3000';
 
 server.bindAsync(port, grpc.ServerCredentials.createInsecure(), (error, port) => {
     if (error) {
