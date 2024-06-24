@@ -23,7 +23,7 @@ public class ServiceToJS {
         CompletableFuture<ImageData> future = new CompletableFuture<>();
 
         // Connection to JS
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("0.0.0.0", 3000)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("Js-container", 3000)
                 .usePlaintext()
                 .build();
         RecieveLayersGrpc.RecieveLayersFutureStub stub = RecieveLayersGrpc.newFutureStub(channel);
