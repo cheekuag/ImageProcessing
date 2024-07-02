@@ -4,7 +4,7 @@ const { pages, browser }=require('./browserInit');
 // gRPC Service Handler to recieve request from Java
 function recieveLayers(call, callback) {
 
-    console.log(call.request.htmlContent)
+    console.log("request received")
     var layerData = call.request.htmlContent;
     let page=null;
 

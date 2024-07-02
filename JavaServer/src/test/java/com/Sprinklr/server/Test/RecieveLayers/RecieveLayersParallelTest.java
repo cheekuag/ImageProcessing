@@ -56,6 +56,40 @@ public class RecieveLayersParallelTest extends ServiceLayerTest {
         executeTest(testInfo, layers);
     }
 
+
+    @Test
+    public void testWithSingleLayer04(TestInfo testInfo) {
+
+        Layers layers = Layers.newBuilder()
+                .addImglayers(testData.imgLayer4)
+                .addTxtlayers(testData.txtLayer)
+                .build();
+
+        executeTest(testInfo, layers);
+    }
+
+    @Test
+    public void testWithSingleLayer05(TestInfo testInfo) {
+
+        Layers layers = Layers.newBuilder()
+                .addImglayers(testData.imgLayer7)
+                .addTxtlayers(testData.txtLayer)
+                .build();
+
+        executeTest(testInfo, layers);
+    }
+
+    @Test
+    public void testWithSingleLayer06(TestInfo testInfo) {
+
+        Layers layers = Layers.newBuilder()
+                .addImglayers(testData.imgLayer8)
+                .addTxtlayers(testData.txtLayer)
+                .build();
+
+        executeTest(testInfo, layers);
+    }
+
     @Test
     public void testWithSingleLayer02(TestInfo testInfo) {
 
