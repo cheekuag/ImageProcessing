@@ -1,11 +1,7 @@
 
 
-  async function generateScreenshot(page, layerData, browser) {
+async function generateScreenshot(page, layerData) {
 
-  // Opening newPage if not available in pages array 
-  if(page===null){
-    page = await browser.newPage();
-  }
     // Create HTML content from layerData
 
     await page.setContent(layerData, { waitUntil: 'load' });
@@ -16,8 +12,7 @@
     // Take screenshot
     const screenshot = await page.screenshot();
 
-    
-    return{ screenshot,page}
-  }
+  return { screenshot, page }
+}
 
-  module.exports = generateScreenshot;
+module.exports = generateScreenshot;
