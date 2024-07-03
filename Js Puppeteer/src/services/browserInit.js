@@ -13,8 +13,8 @@ async function initializePages() {
     console.log("Browser opened")
     browser = await puppeteer.launch({ 
         headless: true, // Run in headless mode
-        // executablePath: '/usr/bin/chromium',
-        // args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: '/usr/bin/chromium',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
      });
     
     for (let i = 0; i < 17; i++) {
