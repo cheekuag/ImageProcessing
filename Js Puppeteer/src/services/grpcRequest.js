@@ -31,7 +31,7 @@ async function processQueue() {
 function recieveLayers(call, callback) {
     console.log("Request received");
     
-    if (pages.length > 0) {
+    if (pages.length > 0 && requestQueue.length === 0) {
         // If pages are available, handle the request immediately
         let page = pages[pages.length-1];
 
