@@ -42,7 +42,7 @@ The image editor allows clients to send layer information, which is processed to
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/cheekuag/ImageProcessing.git
-   cd ImageProcessing/JsPuppeteer
+   cd ImageProcessing/Js\ Puppeteer/
 
 2. **Install dependencies**: `npm install`
 3. **Run the service**:  `node src/index.js`
