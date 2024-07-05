@@ -66,9 +66,9 @@ The image editor allows clients to send layer information, which is processed to
    
    1.**Build JavaServer Docker Image**
 
-   `cd JavaServer`
+   `cd ImageProcessing/JavaServer`
    
-   `docker build -t ImageProcessing/java-server .`
+   `docker build -t java-server .`
 
    2.**Run JavaServer Container**
    
