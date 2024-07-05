@@ -55,7 +55,7 @@ The image editor allows clients to send layer information, which is processed to
    
    1. **Build JsPuppeteer Docker Image**
     
-      `cd JsPuppeteer`
+      `cd ImageProcessing/JsPuppeteer`
       
       `docker build -t jspuppeteer .`
    3. **Run JsPuppeteer Container**
@@ -68,7 +68,7 @@ The image editor allows clients to send layer information, which is processed to
 
    `cd JavaServer`
    
-   `docker build -t java-server .`
+   `docker build -t ImageProcessing/java-server .`
 
    2.**Run JavaServer Container**
    
