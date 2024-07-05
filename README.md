@@ -55,7 +55,7 @@ The image editor allows clients to send layer information, which is processed to
    
    1. **Build JsPuppeteer Docker Image**
     
-      `cd ImageProcessing/JsPuppeteer`
+      `cd ImageProcessing/Js\ Puppeteer/`
       
       `docker build -t jspuppeteer .`
    3. **Run JsPuppeteer Container**
