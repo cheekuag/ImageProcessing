@@ -27,6 +27,18 @@ The image editor allows clients to send layer information, which is processed to
 
 ![Architecture Diagram](architectureDiagram.png)
 
+
+### Setting Up JsPuppeteer
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/cheekuag/ImageProcessing.git
+   cd ImageProcessing/Js\ Puppeteer/
+
+2. **Install dependencies**: `npm install`
+3. **Run the service**:  `npm start`
+
+   
 ### Setting Up JavaServer
 
 1. **Clone the repository**:
@@ -37,15 +49,7 @@ The image editor allows clients to send layer information, which is processed to
 2. **Build the project**: `./gradlew build`
 3. **Run the server**:  `./gradlew bootRun`
 
-### Setting Up JsPuppeteer
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/cheekuag/ImageProcessing.git
-   cd ImageProcessing/Js\ Puppeteer/
-
-2. **Install dependencies**: `npm install`
-3. **Run the service**:  `node src/index.js`
 
 ### Setting Up Docker Environment
 
